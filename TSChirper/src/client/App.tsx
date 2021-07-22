@@ -146,7 +146,7 @@ import './scss/app';
 import Albums from './components/Albums';
 import Details from './components/Details';
 
-const App: React.SFC<IAppProps> = props => {
+const App: React.FC<IAppProps> = props => {
 
 	return (
 		<BrowserRouter>

@@ -14,13 +14,13 @@ export interface Album {
     _created: Date
 }
 
-const Albums: React.SFC<AlbumsProps> = (props) => {
+const Albums: React.SFC<AlbumsProps> = props => {
 
 
     const [albums, setAlbums] = useState<Album[]>([]);
 
     const getAlbums = async () => {
-        let r = await fetch('/api/albums');
+        let r = await fetch('http://student-fun-api.herokuapp.com/api/hiphop');
         let albums = await r.json();
         setAlbums(albums);
     }

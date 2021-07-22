@@ -6,4 +6,8 @@ router.get('/api/hello', (req, res, next) => {
     res.json('Earthlings');
 });
 
+router.get('http://student-fun-api.herokuapp.com/api/hiphop', (req, res, next) => {
+res.send('that shit worked!');
+});
+
 export default router;
