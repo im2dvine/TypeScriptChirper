@@ -17,7 +17,7 @@ const serverConfig = {
 		]
 	},
 	resolve: {
-		extensions: ['.ts', '.js']
+		extensions: ['.tsx', '.ts', '.js']
 	},
 	output: {
 		filename: 'server.js',

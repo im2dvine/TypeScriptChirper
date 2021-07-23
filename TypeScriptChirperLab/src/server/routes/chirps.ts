@@ -1,5 +1,6 @@
 import * as express from "express";
-import { GetChirp, GetChirps, UpdateChirp, DeleteChirp, CreateChirp } from "../utils/chirpstore";
+import { chirp } from "../types";
+import { GetChirp, GetChirps, UpdateChirp, DeleteChirp, CreateChirp } from "./utils/chirpstore";
 
 const router = express.Router();
 
