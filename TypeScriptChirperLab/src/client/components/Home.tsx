@@ -93,4 +93,4 @@ router.delete("/:id", (req, res) => {
     res.sendStatus(200);
 });
 
-export default router;
+export default Home;

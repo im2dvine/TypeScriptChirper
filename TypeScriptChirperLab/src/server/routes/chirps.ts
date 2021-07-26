@@ -1,6 +1,6 @@
 import * as express from "express";
 import { chirp } from "../types";
-import { GetChirp, GetChirps, UpdateChirp, DeleteChirp, CreateChirp } from "./utils/chirpstore";
+import { GetChirp, GetChirps, UpdateChirp, DeleteChirp, CreateChirp } from "../utils/chirpstore";
 
 const router = express.Router();
 
@@ -28,7 +28,7 @@ router.get('/:id?', (req, res) => { // /api/chirps/3
 });
 
 router.post('/', (req, res) => {
-  const chirpObj: chirp = req.body;
+  const chirpObj: chirp1 = req.body;
 
   CreateChirp(chirpObj);
 
@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
 //mandatory id param to tell the server which chirp to update
 router.put('/:id', (req, res) => {
   const id: string = req.params.id;
-  const chirpObj: chirp = req.body;
+  const chirpObj: chirp1 = req.body;
 
   UpdateChirp(id, chirpObj);
 
@@ -53,7 +53,7 @@ router.delete('/:id', (req, res) => {
   res.send("deleted successfully");
 });
 
-interface chirp {
+interface chirp1 {
   id?: string,
   name: string,
   message: string
